@@ -40,6 +40,9 @@ export default {
         if (id === section) {
           // change array items for active navbar item classes
           el.classList.add(...['border-b-2', 'border-black'])
+          if (section !== 'home') {
+            this.$router.push(`#${section}`)
+          }
         } else {
           el.classList.remove(...['border-b-2', 'border-black'])
         }
